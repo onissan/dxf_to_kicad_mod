@@ -3,9 +3,13 @@ Script that helps with generating kicad footprint from dxf file created from a C
 
 Create `Kicad` footprint from `DXF` CAD sketch file. It is difficult to create intricate `Kicad` footprint. Currently, I am using `Kicad` to design PCBs, however this means that I spend plenty of time on footprint design. Creating a shape in CAD tools is simple and accurate but once and converted to the `Kicad` footprint format the DXF import is not filled. Thus this requires some workaround.
 
-A generated footprint from [a dxf file](example.dxf):
+A generated footprint was from [a dxf file](example.dxf). When first imported into kicad footprint feature it looked like the follwoing
 
-![footprint example post](post-example.png)
+![footprint example pre](pre_example.PNG) 
+
+After running the script the following footprint was generated:
+
+![footprint example post](post_example.PNG)
 
 The corresponding [`kicad_mod` file](out_example.kicad_mod) which could be viewed
 by `Kicad` footprint viewer.
@@ -22,20 +26,22 @@ Create a DXF file of your sketch. Import the DXF file into the `Kidcad` footprin
 
 ## how to use
 ### install python
+### install pandas
+### install matplotlib
 
 ```
-https://github.com/mozman/dxfgrabber.git
+https://github.com/onissan/dxf_to_kicad_mod.git
 ```
 
 ### clone this `repe`
 
 ```
-clone https://github.com/pandysong/dxf2kicad_mod.git
-cd dxf2kicad_mod
+clone https://github.com/onissan/dxf_to_kicad_mod.git
+cd dxf_to_kicad_mod
 ```
 
 ### using following command line to generate `kicad_mod`
 
 ```
-python dxf2kicad_mode "Your-kicad-mod-file-name-here" 
+python dxf_to_kicad_mod "Your-kicad-mod-file-name-here" 
 ```
