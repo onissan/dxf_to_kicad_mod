@@ -3,11 +3,11 @@ Script that helps with generating kicad footprint from dxf file created from a C
 
 Create `Kicad` footprint from `DXF` CAD sketch file. It is difficult to create intricate `Kicad` footprint. Currently, I am using `Kicad` to design PCBs, however this means that I spend plenty of time on footprint design. Creating a shape in CAD tools is simple and accurate but once and converted to the `Kicad` footprint format the DXF import is not filled. Thus this requires some workaround.
 
-A generated footprint from [a dxf file](test_data.dxf):
+A generated footprint from [a dxf file](example.dxf):
 
-![footprint sample](sample.png)
+![footprint example post](post-example.png)
 
-The corresponding [`kicad_mod` file](test_data.kicad_mod) which could be viewed
+The corresponding [`kicad_mod` file](out_example.kicad_mod) which could be viewed
 by `Kicad` footprint viewer.
 
 ## How it works
@@ -18,6 +18,7 @@ Create a DXF file of your sketch. Import the DXF file into the `Kidcad` footprin
 
 * it only support lines. In the future, I may add more shape support (by converting the shapes to lines, including arcs)
 * each line must connect with another line beginning or end point very precisely, as the algorithm searches the points location only. It is okay if shapes overlap as long as start or end coordinates of the lines is unique.
+* pads are not created, thus you'd need to go into the foorprint and place them yourself.
 
 ## how to use
 ### install python
